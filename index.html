@@ -11,14 +11,16 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Unika - Responsive One Page HTML5 Template</title>
+		<title>Basil-Personal-website</title>
+        <link rel="icon" href="img/My pic2.avif">
 		<meta name="description" content="Unika - Responsive One Page HTML5 Template">
 		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
 		<meta name="author" content="imransdesign.com">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Google Fonts  -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
@@ -765,7 +767,7 @@
                         	<div class="col-sm-6">
                                 <div class="contact-form">
                                 	<h4>Draft me</h4>
-                                    <form role="form">
+                                    <form role="submit-form"  action="">
                                         <div class="form-group">
                                             <input type="text" class="form-control input-lg" placeholder="Your Name" required>
                                         </div>
@@ -817,8 +819,8 @@
                                     <div id="email">
                                         <form id="subscribe" method="POST">
                                             <input type="text" placeholder="Enter email address" name="email" id="address" data-validate="validate(required, email)"/>
-                                            <button type="submit">Submit</button>
-                                            <span id="result" class="section-description"></span>
+                                            <button value="submit" type="submit">Submit</button>
+                                            <span id="submit" class="section-description"></span>
                                         </form> 
                                     </div>
                                 </div> 
@@ -862,6 +864,25 @@
 
 		<!-- Theme JS -->
 		<script src="js/theme.js"></script>
+        <script>
+            $("#submit-form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbxdnQStKnQWs-tLNEBWU5JVoqkPF118BK4_CF-V/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                        //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                        alert("Something Error")
+        
+                    }
+                })
+            })
+        </script>
 
     </body> 
         
