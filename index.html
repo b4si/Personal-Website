@@ -767,18 +767,18 @@
                         	<div class="col-sm-6">
                                 <div class="contact-form">
                                 	<h4>Draft me</h4>
-                                    <form role="submit-form"  action="">
+                                    <form role="submit-form" >
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Your Name" required>
+                                            <input name="entry.1681439651" type="text" class="form-control input-lg" placeholder="Your Name" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control input-lg" placeholder="E-mail" required>
+                                            <input name="entry.860693316" type="email" class="form-control input-lg" placeholder="E-mail" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" placeholder="Subject" required>
+                                            <input name="entry.776332924" type="text" class="form-control input-lg" placeholder="Subject" required>
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control input-lg" rows="5" placeholder="Message" required></textarea>
+                                            <textarea name="entry.475436297" class="form-control input-lg" rows="5" placeholder="Message" required></textarea>
                                         </div>
                                         <button type="submit" class="btn wow bounceInRight" data-wow-delay="0.8s">Send</button>
                                     </form>
@@ -868,7 +868,7 @@
             $("#submit-form").submit((e)=>{
                 e.preventDefault()
                 $.ajax({
-                    url:"https://script.google.com/macros/s/AKfycbxdnQStKnQWs-tLNEBWU5JVoqkPF118BK4_CF-V/exec",
+                    url:"https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCQZFOtiLLqyinTbG5mcfYvY0aPImueyV2ZJf32jOEMo8ZeA/formResponse",
                     data:$("#submit-form").serialize(),
                     method:"post",
                     success:function (response){
