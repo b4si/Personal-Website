@@ -767,7 +767,7 @@
                         	<div class="col-sm-6">
                                 <div class="contact-form">
                                 	<h4>Draft me</h4>
-                                    <form role="submit-form" >
+                                    <form role="submit-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCQZFOtiLLqyinTbG5mcfYvY0aPImueyV2ZJf32jOEMo8ZeA/formResponse" >
                                         <div class="form-group">
                                             <input name="entry.1681439651" type="text" class="form-control input-lg" placeholder="Your Name" required>
                                         </div>
@@ -864,25 +864,6 @@
 
 		<!-- Theme JS -->
 		<script src="js/theme.js"></script>
-        <script>
-            $("#submit-form").submit((e)=>{
-                e.preventDefault()
-                $.ajax({
-                    url:"https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCQZFOtiLLqyinTbG5mcfYvY0aPImueyV2ZJf32jOEMo8ZeA/formResponse",
-                    data:$("#submit-form").serialize(),
-                    method:"post",
-                    success:function (response){
-                        alert("Form submitted successfully")
-                        window.location.reload()
-                        //window.location.href="https://google.com"
-                    },
-                    error:function (err){
-                        alert("Something Error")
-        
-                    }
-                })
-            })
-        </script>
 
     </body> 
         
